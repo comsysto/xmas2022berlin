@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "16462e69-4942-4d8b-86c2-9194071ce568",
+		"name": "X-MAS Ledstrip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "setModus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.100/modus",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"100"
+					],
+					"path": [
+						"modus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setBrightness",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brightness\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.100/brightness",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"100"
+					],
+					"path": [
+						"brightness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setColor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"leds\": [\r\n        {\r\n            \"led\": 2,\r\n            \"r\": 255,\r\n            \"g\": 0,\r\n            \"b\": 0\r\n        },\r\n         {\r\n            \"led\": 5,\r\n            \"r\": 255,\r\n            \"g\": 63,\r\n            \"b\": 50\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.100/leds",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"100"
+					],
+					"path": [
+						"leds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unblock Leds",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.100/unblockleds",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"100"
+					],
+					"path": [
+						"unblockleds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.100/leds",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"100"
+					],
+					"path": [
+						"leds"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
